@@ -56,13 +56,14 @@ generateStyle(TabbedButtonBar::Orientation::TabsAtTop)
     
     
     addAndMakeVisible(generateStyle);
+    generateStyle.addTab("No",Colours::beige, 0);
+    generateStyle.addTab("Reversed",Colours::beige, 1);
+    generateStyle.addTab("Random",Colours::beige, 2);
     generateStyle.setBounds( RelativeRectangle ("right - parent.width / 2,\
                                          bottom - parent.height / 4,\
                                          parent.width  ,\
                                          parent.height *2/ 4 "));
-    generateStyle.addTab("No",Colours::beige, 0);
-    generateStyle.addTab("Reversed",Colours::beige, 1);
-    generateStyle.addTab("Random",Colours::beige, 2);
+    
 
     
 
@@ -126,7 +127,7 @@ HierarchicalShiftAudioProcessor * HierarchicalShiftAudioProcessorEditor::getProc
 
 void HierarchicalShiftAudioProcessorEditor::buttonClicked(Button *b){
     if(b == &record){
-    getProcessor()->setRecording(record.getToggleState());
+    getProcessor()->setImmediateRecording(record.getToggleState());
     }
     
     

@@ -1393,6 +1393,15 @@
 			name = system;
 			sourceTree = "<group>";
 		};
+		3FFA1A1C1BD782B70090B4DF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3FFA1A191BD77D990090B4DF /* MyLookAndFeel.cpp */,
+				3FFA1A1A1BD77D990090B4DF /* MyLookAndFeel.h */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		41D2A825A55C2F93D4871492 /* geometry */ = {
 			isa = PBXGroup;
 			children = (
@@ -1629,8 +1638,7 @@
 		6426F89B9D104E2C4DE327ED /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3FFA1A191BD77D990090B4DF /* MyLookAndFeel.cpp */,
-				3FFA1A1A1BD77D990090B4DF /* MyLookAndFeel.h */,
+				3FFA1A1C1BD782B70090B4DF /* UI */,
 				8BA3ACB0A964022D831A2E8F /* PluginProcessor.cpp */,
 				C812753F86D0F7A8D38A4464 /* PluginProcessor.h */,
 				2A1652044EDBD1837BB0A950 /* PluginEditor.cpp */,

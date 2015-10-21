@@ -102,10 +102,10 @@ public:
     
 
     
+    void willRecQuantized(bool b);
     
-    
-    void setPlaying(bool b);
-    void setRecording(bool b);
+    void setImmediatePlaying(bool b);
+    void setImmediateRecording(bool b);
     
     void updatePosition();
     
@@ -118,6 +118,17 @@ public:
     
     
 private:
+    
+    
+    typedef enum{
+        NONE=0,
+        REC,
+        STOPREC
+        
+    } QuantizedCommand;
+    
+    void doQuantizedCommand();
+    QuantizedCommand qCommand;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (HierarchicalShiftAudioProcessor)
 };

@@ -17,9 +17,10 @@ HierarchicalShiftAudioProcessor::HierarchicalShiftAudioProcessor():
 recordHead(0),
 playHead(0),
 localBpm(60),
-localLoopBeats(4)
+localLoopBeats(4),
+qCommand(NONE)
 {
-    setPlaying(false);
+    setImmediatePlaying(false);
     generateLinearBeatMap(true);
     //    generateRandomBeatMap(localLoopBeats);
 }
@@ -57,6 +58,7 @@ void HierarchicalShiftAudioProcessor::processBlock (AudioSampleBuffer& buffer, M
     
     checkBufferLength();
     updatePosition();
+    doQuantizedCommand();
     
     for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
@@ -123,7 +125,7 @@ void HierarchicalShiftAudioProcessor::checkBufferLength(){
 
 
 
-void HierarchicalShiftAudioProcessor::setRecording(bool b){
+void HierarchicalShiftAudioProcessor::setImmediateRecording(bool b){
     if(b){
         recordHead = 0 ;
         startRecordPosition = position.timeInSamples;
@@ -134,10 +136,10 @@ void HierarchicalShiftAudioProcessor::setRecording(bool b){
         
     }
     else{
-        setPlaying(true);
+        setImmediatePlaying(true);
     }
 }
-void HierarchicalShiftAudioProcessor::setPlaying(bool b){
+void HierarchicalShiftAudioProcessor::setImmediatePlaying(bool b){
     if(b){
         recordState = PLAYING;
         playHead=0;
@@ -332,9 +334,34 @@ void HierarchicalShiftAudioProcessor::generateLinearBeatMap(bool reversed){
     for(int i = 0 ; i < size ; i++){
         beatMap.set(i, reversed?size-1-i:i);
     }
-        longestBeatMap=beatMap;
+    longestBeatMap=beatMap;
 }
 
+void HierarchicalShiftAudioProcessor::willRecQuantized(bool b){
+    qCommand = b?REC:STOPREC;
+    
+}
+
+void HierarchicalShiftAudioProcessor::doQuantizedCommand(){
+    if(qCommand!=NONE){
+        if((int)sampleToBeat(position.timeInSamples) !=
+           (int)sampleToBeat(position.timeInSamples-getBlockSize())){
+            switch(qCommand){
+                case REC:
+                    setImmediateRecording(true);
+                    break;
+                case STOPREC:
+                    setImmediateRecording(false);
+                    break;
+                default:
+                    jassertfalse;
+                    
+            }
+            qCommand = NONE;
+        }
+        
+    }
+}
 
 
 AudioProcessorEditor* HierarchicalShiftAudioProcessor::createEditor()
