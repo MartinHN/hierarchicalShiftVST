@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FILTERGRAPH>
+  <FILTER uid="1" x="0.5" y="0.10000000149011611938" uiLastX="0" uiLastY="0">
+    <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="Raw Material Software" version="1.0" file="" uid="246006c0"
+            isInstrument="0" fileTime="0" numInputs="0" numOutputs="2" isShell="0"/>
+    <STATE>0.</STATE>
+  </FILTER>
+  <FILTER uid="2" x="0.25" y="0.10000000149011611938" uiLastX="0" uiLastY="0">
+    <PLUGIN name="Midi Input" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="Raw Material Software" version="1.0" file="" uid="cb5fde0b"
+            isInstrument="0" fileTime="0" numInputs="0" numOutputs="0" isShell="0"/>
+    <STATE>0.</STATE>
+  </FILTER>
+  <FILTER uid="3" x="0.5" y="0.89999997615814208984" uiLastX="0" uiLastY="0">
+    <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="Raw Material Software" version="1.0" file="" uid="724248cb"
+            isInstrument="0" fileTime="0" numInputs="2" numOutputs="0" isShell="0"/>
+    <STATE>0.</STATE>
+  </FILTER>
+  <FILTER uid="4" x="0.40500000000000002665" y="0.56111111111111111605"
+          uiLastX="0" uiLastY="23">
+    <PLUGIN name="hierarchicalShift" format="VST" category="Effect" manufacturer="OrganicOrchestra"
+            version="V1.0.0" file="/Users/Tintamar/Library/Audio/Plug-Ins/VST/hierarchicalShift.vst"
+            uid="4661776e" isInstrument="0" fileTime="150844492d0" numInputs="2"
+            numOutputs="2" isShell="0"/>
+    <STATE>160.CMlaKA....fQBMDZ....AXTX24F....Y....A.................................................................................................................................................................................</STATE>
+  </FILTER>
+  <FILTER uid="6" x="0.09375" y="0.33518518518518519711" uiLastX="0" uiLastY="23">
+    <PLUGIN name="AUAudioFilePlayer" format="AudioUnit" category="Generator"
+            manufacturer="Apple" version="1.6.0" file="AudioUnit:Generators/augn,afpl,appl"
+            uid="6163676e" isInstrument="0" fileTime="0" numInputs="0" numOutputs="2"
+            isShell="0"/>
+    <STATE>877.hAGaoMGcv.C1AHv.DTfAGfPBJr.IkXxIpvUag4VclE1XzUmbkIGUjEFcg8EDarVPUAkbkMWYzAUYxMWZyQWYtQ2TzEFcksTY4c0b0IFc4AWYWYWYxMWZu4FUzkGbk8EDOXVZrUVKxUlYkIWYtMVYyQkag0VYRDFbvwFPhxfFR2fCO.AVFkFak4TXsU1URU1Yo8lay8EDo8RUyUlby8BUo4Fcg0VXx8BQkY2KkUVXx8RYkElbsPVYs8VKsgFYs.GYuzDRD0xbn8lbz0Bau8Fby8RL070PnkFar0xS0Q2WE0Rao41ax8ULxfyWzXiM3fSM43RavMyWr81av8ULtbWX1EZDTKwDTTgEWXQFdIUYmk1atQzakMGSu8FbZIUYmk1atQTXzE1WP.QRyMUYrU1XzUFYRU1Yo8laZIUYmk1at4TXsUVBOAAb...........jEQF...F...7jB...fA..PxwLCD.....jbLy.A.........................P................................................QsLGZ..........PkDJ..eMDZokfVNU1cfHUYmk1atMcCNrAGcXgWIM2TkwVYiQWYjYTZrU1WPb1KUMWYxM2KTklazEVagI2KDUlcuTVYgI2KkUVXx0BYk01aszFZj0Bbj8RSHQTKyg1axQWKr81avM2KyDCMegza0MWYeQzHszVZt8lbeEiL37ULwHiMyHSLtzFby7Eau8FbeAiK2Elcg5A0RLAEUXAHVHRBOAAb...........fvT....F...NcB..ffA..ffvbAD.....HHLW.A.........................P................................................QsLGZ...........pEJ..z7ERukfVNU1cfHUYmk1atkfDgYFbrAA.RDVcm4lznjxCbXkQowVYfDiUFkFakAhLXUkazkFcrUFY.f..Y.fI.rB.IAPT.jE.dA.b.TG.5Avd.3G.CB.i.PY..Df.ArP.ZDPIAfS.CE.QAba.3FvvAnb.YKvPBTj.NIvSBHr.CKfyB7r.TKf0Brs.fKv4B3N.......f.A.........vJ..................f.2C</STATE>
+  </FILTER>
+  <CONNECTION srcFilter="4" srcChannel="0" dstFilter="3" dstChannel="0"/>
+  <CONNECTION srcFilter="4" srcChannel="1" dstFilter="3" dstChannel="1"/>
+  <CONNECTION srcFilter="6" srcChannel="0" dstFilter="4" dstChannel="0"/>
+  <CONNECTION srcFilter="6" srcChannel="1" dstFilter="4" dstChannel="1"/>
+</FILTERGRAPH>
