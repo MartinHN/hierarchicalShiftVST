@@ -92,7 +92,7 @@ void HierarchicalShiftAudioProcessor::processBlock (AudioSampleBuffer& buffer, M
 
 void HierarchicalShiftAudioProcessor::recordNext(AudioSampleBuffer& b){
     
-    if(recordBPM==position.bpm){
+    if(recordBPM!=position.bpm){
         DBG("cant change BPM while recording");
         jassertfalse;
     }
@@ -155,6 +155,7 @@ void HierarchicalShiftAudioProcessor::setPlaying(bool b){
         else{
             int64 loopLength = (position.timeInSamples - startRecordPosition);
             localBpm = localLoopBeats*60.0*getSampleRate()/loopLength;
+            recordBPM = localBpm;
             localBuffer.setSize(1, loopLength,true);
         }
         

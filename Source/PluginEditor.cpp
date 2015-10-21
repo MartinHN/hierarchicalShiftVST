@@ -10,7 +10,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
-
+#include "MyLookAndFeel.h"
 
 //==============================================================================
 HierarchicalShiftAudioProcessorEditor::HierarchicalShiftAudioProcessorEditor (HierarchicalShiftAudioProcessor& p):
@@ -23,8 +23,8 @@ generateStyle(TabbedButtonBar::Orientation::TabsAtTop)
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     setSize (400, 300);
-    
-    setLookAndFeel(new LookAndFeel_V2);
+    myLookNFeel = new MyLookAndFeel();
+    setLookAndFeel(myLookNFeel);
     addAndMakeVisible(record);
 
     

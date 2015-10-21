@@ -19,6 +19,7 @@
 		312BF0E9103445006363D307 /* juce_VST_Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F83BB5EE0A6230EABAB5C1AA /* juce_VST_Wrapper.mm */; };
 		341687C41F43979958E55979 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA81A0BBE8F05400C2670AD /* QTKit.framework */; };
 		3A606CFDAF4562FB1B71300D /* juce_cryptography.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A3573D0004FA6FD5B6068BE /* juce_cryptography.mm */; };
+		3FFA1A1B1BD77D990090B4DF /* MyLookAndFeel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA1A191BD77D990090B4DF /* MyLookAndFeel.cpp */; };
 		4348195B537B6504F9926F21 /* juce_gui_extra.mm in Sources */ = {isa = PBXBuildFile; fileRef = F13C487A78C24DB4E2496C16 /* juce_gui_extra.mm */; };
 		54889A0A6FCB225CA93193C3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E0E34E3BF71419F2A646A7 /* Accelerate.framework */; };
 		5EECF8823CB32CCE026B72A9 /* PluginEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A1652044EDBD1837BB0A950 /* PluginEditor.cpp */; };
@@ -263,6 +264,8 @@
 		3F2DCC2F41F2FBFA4869685C /* juce_PluginDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_PluginDescription.h; path = ../../../JUCE/modules/juce_audio_processors/processors/juce_PluginDescription.h; sourceTree = SOURCE_ROOT; };
 		3F5DDA634717E5B435ED624B /* juce_win32_DirectSound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_win32_DirectSound.cpp; path = ../../../JUCE/modules/juce_audio_devices/native/juce_win32_DirectSound.cpp; sourceTree = SOURCE_ROOT; };
 		3F7A5618F0FB8EE3B32FF3FB /* juce_PixelFormats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_PixelFormats.h; path = ../../../JUCE/modules/juce_graphics/colour/juce_PixelFormats.h; sourceTree = SOURCE_ROOT; };
+		3FFA1A191BD77D990090B4DF /* MyLookAndFeel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyLookAndFeel.cpp; sourceTree = "<group>"; };
+		3FFA1A1A1BD77D990090B4DF /* MyLookAndFeel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLookAndFeel.h; sourceTree = "<group>"; };
 		3FFBE0A8743D3540373CE14B /* juce_SVGParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_SVGParser.cpp; path = ../../../JUCE/modules/juce_gui_basics/drawables/juce_SVGParser.cpp; sourceTree = SOURCE_ROOT; };
 		4000ECBE4DA51E21A5F3A690 /* juce_CharPointer_UTF32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_CharPointer_UTF32.h; path = ../../../JUCE/modules/juce_core/text/juce_CharPointer_UTF32.h; sourceTree = SOURCE_ROOT; };
 		401B835E949B7E2A4D81A5F2 /* juce_Primes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_Primes.h; path = ../../../JUCE/modules/juce_cryptography/encryption/juce_Primes.h; sourceTree = SOURCE_ROOT; };
@@ -1626,6 +1629,8 @@
 		6426F89B9D104E2C4DE327ED /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3FFA1A191BD77D990090B4DF /* MyLookAndFeel.cpp */,
+				3FFA1A1A1BD77D990090B4DF /* MyLookAndFeel.h */,
 				8BA3ACB0A964022D831A2E8F /* PluginProcessor.cpp */,
 				C812753F86D0F7A8D38A4464 /* PluginProcessor.h */,
 				2A1652044EDBD1837BB0A950 /* PluginEditor.cpp */,
@@ -2858,6 +2863,7 @@
 				6E16929A5C302BFE2C955E94 /* juce_core.mm in Sources */,
 				3A606CFDAF4562FB1B71300D /* juce_cryptography.mm in Sources */,
 				9053D53FDA8EE2C826B7F4D5 /* juce_data_structures.mm in Sources */,
+				3FFA1A1B1BD77D990090B4DF /* MyLookAndFeel.cpp in Sources */,
 				2A73D57383C5259AC156233C /* juce_events.mm in Sources */,
 				DF2317C5FC572FB4066BDD83 /* juce_graphics.mm in Sources */,
 				DED6BFB12026D034D48ACC57 /* juce_gui_basics.mm in Sources */,

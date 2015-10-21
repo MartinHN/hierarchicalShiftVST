@@ -44,6 +44,8 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     HierarchicalShiftAudioProcessor& processor;
+    
+    ScopedPointer<LookAndFeel> myLookNFeel;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (HierarchicalShiftAudioProcessorEditor)
 };
